@@ -1,0 +1,47 @@
+Ejercicio 1
+
+a. Cuál es la capital de un país que exista en la base de datos.
+
+?- capital(colombia,bogota).
+true.
+
+b. Cuál es la capital de un país que no exista en la base de datos.
+
+?- capital(españa, bogota).
+false.
+
+
+c. De que país es capital una ciudad que este en la base de datos.
+
+?- capital(ecuador,quito).
+true.
+
+d. De que país es capital una ciudad (con espacios).
+
+?- capital('estados unidos', 'washington dc').
+true. 
+
+e. Determinar si Medellín es capital de un país.
+
+?- capital(colombia, medellin).
+false.
+
+Ejercicio 2
+
+a) Cuales son los tópicos de un determinado youtuber? (obtener todos los tópicos dado el nombre del
+youtuber)
+
+?- topicosYoutuber("ElRubius", Topicos).
+Topicos = "videojuegos" ;
+Topicos = "humor".
+
+b) Qué youtubers hablan de un determinado tópico? (obtener todos los youtuber dado el tópico)
+
+?- topicosYoutuber(Youtubers, "videojuegos").
+Youtubers = "ElRubius" ;
+Youtubers = "Vegetta777".
+
+c) Dados dos youtubers, encontrar que tópicos tienen en común. Sugerencia: Utilizar una consulta en forma
+de conjunción.
+
+
