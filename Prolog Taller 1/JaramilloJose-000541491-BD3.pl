@@ -3,14 +3,19 @@ capital(ecuador, quito).
 capital(argentina, 'buenos aires').
 capital('corea  del sur', seul).
 capital('estados unidos', 'washington dc').
-topicosYoutuber("ElRubius", "videojuegos").
-topicosYoutuber("ElRubius", "minecraft").
-topicosYoutuber("Vegetta777", "videojuegos").
-topicosYoutuber("Vegetta777", "minecraft").
-topicosYoutuber("HolaSoyGerman", "humor").
-topicosYoutuber("HolaSoyGerman", "vlogs").
-topicosYoutuber("Luisito Comunica", "viajes").
-topicosYoutuber("Luisito Comunica", "exploracion").
-topicosYoutuber("Zazza el italiano", "viajes").
-topicosYoutuber("Zazza el italiano", "documentacion").
+
+
+
+
+topicosyoutuber('elrubius', 'videojuegos').
+topicosyoutuber('elrubius', 'minecraft').
+topicosyoutuber('vegeta777', 'videojuegos').
+topicosyoutuber('vegeta777', 'minecraft').
+topicosyoutuber('holasoygerman', 'videojuegos').
+topicosyoutuber('holasoygerman', 'vlogs').
+topicosyoutuber('luisito comunica', 'viajes').
+topicosyoutuber('luisito comunica', 'exploracion').
+topicosyoutuber('zazza el italiano', 'viajes').
+topicosyoutuber('zazza el italiano', 'documentacion').
+
 

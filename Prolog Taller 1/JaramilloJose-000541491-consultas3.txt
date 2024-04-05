@@ -2,28 +2,27 @@ Ejercicio 1
 
 a. Cuál es la capital de un país que exista en la base de datos.
 
-?- capital(colombia,bogota).
-true.
+?- capital(colombia, CAPITAL).
+CAPITAL = bogota.
 
 b. Cuál es la capital de un país que no exista en la base de datos.
 
-?- capital(españa, bogota).
+෺?- capital(españa, CAPITAL).
 false.
-
 
 c. De que país es capital una ciudad que este en la base de datos.
 
-?- capital(ecuador,quito).
-true.
+?- capital(PAIS, quito).
+PAIS = ecuador.
 
 d. De que país es capital una ciudad (con espacios).
 
-?- capital('estados unidos', 'washington dc').
-true. 
+?- capital(PAIS, 'washington dc').
+PAIS = 'estados unidos'.
 
 e. Determinar si Medellín es capital de un país.
 
-?- capital(colombia, medellin).
+?- capital(PAIS, medellin).
 false.
 
 Ejercicio 2
