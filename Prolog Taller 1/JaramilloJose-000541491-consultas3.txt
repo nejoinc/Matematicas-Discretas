@@ -44,3 +44,32 @@ c) Dados dos youtubers, encontrar que tópicos tienen en común. Sugerencia: Uti
 de conjunción.
 
 
+̀?- topicosyoutuber('elrubius', Topico), topicosyoutuber('vegeta777', Topico), 'elrubius' \= 'vegeta777'.
+Topico = videojuegos ;
+Topico = minecraft.
+
+d) Dados dos tópicos, encontrar un youtuber que trate ambos tópicos. Utilizar una consulta en forma de
+conjunción. (Una sola expresión lógica)
+
+?- topicosyoutuber(Youtuber, 'videojuegos'), topicosyoutuber(Youtuber, 'vlogs').
+Youtuber = holasoygerman.
+
+e) Dados dos tópicos, encontrar todos los youtuber que tratan cualquiera de los dos tópicos. Sugerencia:
+Utilizar una consulta en forma de disyunción. (Una sola expresión lógica)
+
+
+?- topicosyoutuber(Youtuber, 'videojuegos'); topicosyoutuber(Youtuber, 'vlogs').
+Youtuber = elrubius ;
+Youtuber = vegeta777 ;
+Youtuber = holasoygerman ;
+Youtuber = holasoygerman.
+
+f) Encontrar tres youtuber distintos (X,Y,Z) que traten un mismo tópico. El nombre del tópico no se
+conoce. Hacer la consulta como una sola expresión lógica. (Asegurarse de tener definidos casos que
+cumplan en la base de datos).
+
+?- topicosyoutuber(X, Topico), topicosyoutuber(Y, Topico), topicosyoutuber(Z, Topico), X \= Y, Y \= Z, X \= Z.
+X = elrubius,
+Topico = videojuegos,
+Y = vegeta777,
+Z = holasoygerman 
