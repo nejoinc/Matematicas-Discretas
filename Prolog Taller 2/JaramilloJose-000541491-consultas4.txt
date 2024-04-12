@@ -1,0 +1,41 @@
+Jose Manuel Jaramillo Valencia ID 000541491
+
+Taller 4 Matematicas Discretas
+
+Ejercicio 1
+
+a) Se quiere poder responder consultas negativas, como por ejemplo:
+
+b) Encontrar que topicos no maneja un determinado youtuber.
+
+	R/ 6 ?- topico(Topico), \+ topicosyoutuber('elrubius', Topico).
+		Topico = vlogs ;
+		Topico = viajes ;
+		Topico = exploracion ;
+		Topico = documentacion.
+
+c) Encontrar dos topicos distintos (X,Y) que no trate un determinado youtuber.
+(Conjunción)
+
+	R/ 11 ?- topico(X), topico(Y), X \= Y, \+ topicosyoutuber('elrubius', X), \+ topicosyoutuber('elrubius', Y).
+		X = vlogs,
+		Y = viajes .
+
+d) Para resolver las consultas anteriores, incluir los hechos necesarios en la
+base de datos que permitan definir los universos de youtubers y topicos.
+
+	R/ Hecho.
+
+
+
+Ejercicio 2
+
+a) Dos personas son primos si sus padres son hermanos.
+	R/ 37 ?- primos(santiago, pepe).
+		true 
+
+	39 ?- primos(pepe, X).
+		X = santiago ;
+		X = john 
+
+b) Una persona es sobrino de su tio/tia.
