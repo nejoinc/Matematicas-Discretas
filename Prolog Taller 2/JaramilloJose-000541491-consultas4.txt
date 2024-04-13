@@ -39,3 +39,128 @@ a) Dos personas son primos si sus padres son hermanos.
 		X = john 
 
 b) Una persona es sobrino de su tio/tia.
+
+	R/ ?- 
+|    	sobrino(X, pedro).
+	X = santiago .
+
+	?- sobrino(X, pedro).
+	X = santiago ;
+	X = john ;
+	false.
+
+	?- sobrino(santiago, X).
+	X = pedro.
+
+	?- sobrino(john, X).
+	X = pedro.
+
+	?- sobrino(pepe, sobrino).
+	false.
+
+	?- sobrino(pepe, X).
+	X = sergio .
+
+c) Los nietos de una persona son los hijos de los hijos.
+?- 
+|    	nieto(Nietos, jorge).
+	Nietos = santiago ;
+	Nietos = john ;
+	Nietos = pepe ;
+	Nietos = jose.
+
+	?- nieto(jose, Abuelo).
+	Abuelo = jorge .
+
+	?- nieto(jose, jose).
+	false.
+
+
+Ejericicio 3
+
+Definir en la base de datos hechos hijo/2, con ejemplos suficientes para resolver
+las siguientes consultas. Indicar la consulta y la respuesta obtenida por el Prolog
+para los siguientes casos:
+
+
+a) Encontrar todos los primos de una persona.
+?- primos(santiago, Primos).
+Primos = pepe ;
+Primos = jose ;
+Primos = pepe ;
+Primos = jose ;
+false.
+
+?- primos(jose, Primos).
+Primos = santiago ;
+Primos = john ;
+Primos = santiago ;
+Primos = john ;
+false.
+
+?- primos(Primos, jose).
+Primos = santiago ;
+Primos = john ;
+Primos = santiago ;
+Primos = john ;
+false.
+
+?- primos(Primos, pepe).
+Primos = santiago .
+
+?- 
+|    primos(Primos, pepe).
+Primos = santiago ;
+Primos = john ;
+Primos = santiago ;
+Primos = john ;
+false.
+
+?- 
+
+b) Encontrar todos los tios de una persona.
+
+
+?- tio(Tio, santiago).
+Tio = pedro ;
+false.
+
+?- tio(Tio, jose).
+Tio = sergio ;
+false.
+
+?- tio(Tio, sergio).
+false.
+
+?- tio(pedro, Sobrino).
+Sobrino = santiago .
+
+
+
+c) Encontrar todos los nietos de una persona.
+
+?- nieto(Nietos, jorge).
+Nietos = santiago ;
+Nietos = john ;
+Nietos = pepe ;
+Nietos = jose.
+
+
+d) Encontrar todos los abuelos de una persona.
+
+
+ሀ?- abuelo(Abuelo, lucia).
+Abuelo = esteban .
+
+?- abuelo(Abuelo, olga).
+false.
+
+?- abuelo(Abuelo, lucia).
+Abuelo = esteban .
+
+?- abuelo(Abuelo, santiago).
+Abuelo = jorge .
+
+?- abuelo(Abuelo, pepe).
+Abuelo = jorge ;
+false.
